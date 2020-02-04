@@ -1,10 +1,9 @@
 source "https://rubygems.org"
-
-ruby '2.6.0'
-
 gem "sinatra"
 gem "activerecord"
 gem "sinatra-activerecord"
+
+gem 'bootstrap', '~> 4.1.3'
 
 gem "pg"
 gem "rake"

@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en" style="background-color: lightblue">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="../static/css/index_style.css">
+    <title>Whack Result</title>
+  </head>
+
+
+  <body style="background-color: lightblue">
+  <div class="container" style="background-color: lightblue">
+  <div class="card mx-auto my-5" style="border-radius: 1rem !important;">
+  <div class="card-body">
+
+  <div class="col mx-auto">
+
+    <h1 class="card-title text-center mt-3 mb-5">Here is the searching result:</h1>
+    <h3>Your words (<%= key_word1 %> and <%= key_word2 %>) gave an index of <%= index %> with a score of <%= score %>.</h3>
+    <h3><%= comments %></h3>
+      <% if index != 0 %>
+        <h5>An example tweet that contained these words is:</h5>
+        <h5><%= sample_tweet_text %> </h5>
+        <h5>by <%= user_name %></h5>
+        
+    <% else%>
+    <h3> <%=sample_tweet%> </h3>
+      <% end %>
+
+      <a href="/" class="col mx-auto; btn btn-primary">Try again</a>
+
+      </div>
+      </div>
+</div>
+</div>
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>
