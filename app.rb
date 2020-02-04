@@ -3,16 +3,19 @@ require_relative 'TwitterCrawler'
 require_relative 'comment'
 
 get '/' do
+    # here is the home page for this twitter whack
     erb :home
 end
 
 post '/' do
+    # this post method will catch the key words user pass from front end and will redirect to get '/result'
     key_word1 = params[:key_word1]
     key_word2 = params[:key_word2]
     redirect "/result?key_word1=#{key_word1}&key_word2=#{key_word2}"
 end
 
 get '/result' do
+    # here is the get '/result' method, it will trigger twitter client and will return result to front end
     twitter_client = TwitterCrawler.new
     result1 = twitter_client.search(params[:key_word1])
     result2 = twitter_client.search(params[:key_word2])
